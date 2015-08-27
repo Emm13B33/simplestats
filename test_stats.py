@@ -1,5 +1,5 @@
 from stats import mean
-from nose.tools import assert_equal
+from nose.tools import assert_equal, assert_almost_equal
 
 #testing our new mean function
 def test_mean():
@@ -11,6 +11,8 @@ def test_float_mean():
 #test_float_mean()
 
 def test_long_mean():
-	assert_equal(mean([2,4,6,8]), 5)
+	assert_almost_equal(mean([-2,2,4]), 1.333, places=3)
 #test_long_mean()
+
+#Test driven development, standard deviation as an example
 
